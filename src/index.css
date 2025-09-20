@@ -1,4 +1,7 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
 
 @theme {
   --color-primary: #10367d;
@@ -24,8 +27,23 @@ button {
   @apply px-8 sm:px-20;
 }
 .link {
-  @apply tracking-wider hover:underline transition duration-300 underline-offset-4 decoration-primary;
+  @apply tracking-wider cursor-pointer hover:underline transition duration-300 underline-offset-4 decoration-primary;
 }
 option {
   @apply bg-gray-600 text-white font-medium tracking-wider;
+}
+.form {
+  @apply flex flex-col gap-2;
+}
+.form label {
+  @apply text-lg tracking-wider;
+}
+.form input {
+  @apply bg-third w-[400px] p-1 px-2;
+}
+.form textarea {
+  @apply bg-third mb-5 w-[400px] p-1 px-2;
+}
+.footer_con {
+  @apply flex space-x-2;
 }

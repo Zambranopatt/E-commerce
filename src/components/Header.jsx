@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import profile from "../assets/profile.png";
+import { House, EqualApproximately, Contact, ShoppingCart } from "lucide-react";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,22 +11,22 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex items-center h-[60px]  px-8 sm:px-20 justify-between">
+      <header className="flex fixed w-full z-1 bg-white items-center h-[60px]  px-8 sm:px-20 justify-between">
         <div>
           <h1 className="text-2xl font-bold text-primary capitalize">Thrift</h1>
         </div>
         <nav className="hidden sm:flex sm:space-x-12">
-          <a href="*" className="link">
+          <a href="#home" className="link">
             Home
           </a>
-          <a href="*" className="link">
-            About
+          <a href="#latest" className="link">
+            Latest
           </a>
-          <a href="*" className="link">
+          <a href="#contact" className="link">
             Contacts
           </a>
           <select>
-            <option value=""></option>
+            <option value="">Thrifts</option>
             <option value="">Thrifts</option>
             <option value="">Shirts</option>
             <option value="">Caps</option>
@@ -39,13 +40,13 @@ const Header = () => {
           </button>
 
           <button
-            className="rotate-90 text-black py-2 px-2 font-bold rounded-md"
+            className="rotate-90  text-black py-2 px-2 font-bold rounded-md"
             onClick={seeMore}
           >
             lll
           </button>
           <div
-            className="w-[200px] rounded-l-3xl h-[400px] absolute flex flex-col text-white bg-gray-500 top-0 z-10 right-0 "
+            className="w-[200px]  rounded-l-3xl h-[400px] absolute flex flex-col text-white bg-gray-500 top-0 z-10 right-0 "
             style={{ display: toggle ? "block" : "none" }}
           >
             <div className="text-left">
@@ -57,23 +58,38 @@ const Header = () => {
               </button>
             </div>
             <nav className="flex flex-col m-5 space-y-7">
-              <a href="*" className="link">
-                Home
-              </a>
-              <a href="*" className="link">
-                About
-              </a>
-              <a href="*" className="link">
-                Services
-              </a>
-              <a href="*" className="link">
-                Contacts
-              </a>
+              <div className="footer_con">
+                <House />
+                <a href="*" className="link">
+                  Home
+                </a>
+              </div>
+              <div className="footer_con">
+                <EqualApproximately />
+                <a href="*" className="link">
+                  Latest
+                </a>
+              </div>
+              <div className="footer_con">
+                <Contact />
+                <a href="*" className="link">
+                  Contact
+                </a>
+              </div>
+              <div className="footer_con">
+                <ShoppingCart />
+                <a href="*" className="link">
+                  Thrifts
+                </a>
+              </div>
             </nav>
           </div>
         </span>
       </header>
-      <section className="h-[calc(100vh-60px)] bg-gray-100  flex items-center justify-center flex-col overflow-hidden ">
+      <section
+        id="home"
+        className="h-[calc(100vh-60px)] bg-gray-100  flex items-center justify-center flex-col overflow-hidden "
+      >
         <img
           src={profile}
           className="h-[800px] hover:scale-110 transition duration-300"

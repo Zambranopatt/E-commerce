@@ -12,16 +12,19 @@ const Merc = () => {
     { img: bags, name: "bags" },
   ];
   return (
-    <section className="sec flex items-center flex-col min-h-1/2 py-15 space-y-7">
-      <div>
+    <section className="sec flex items-center flex-col h-screen py-15 space-y-7">
+      <div className="text-center">
         <h1 className="text-3xl font-medium text-primary">Merch</h1>
+        <p className="text-lg tracking-wide">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+        </p>
       </div>
       <div className="flex w-full items-center justify-between">
         {merchs &&
           merchs.map((el, i) => (
             <div
               key={i}
-              className="bg-gray-100 cursor-pointer  shadow-lg rounded-2xl p-2 w-[280px] h-[350px] hover:scale-110 transition duration-300"
+              className="bg-gray-100 cursor-pointer  shadow-lg rounded-2xl p-2 w-[250px] h-[350px] hover:scale-110 transition duration-300"
             >
               <h1 className="text-lg tracking-wide">{el.name}</h1>
 
