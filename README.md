@@ -1,4 +1,4 @@
-Landing Page
+E-commerce
 
 Tech used
 -React
