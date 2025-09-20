@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10367d;
+  --color-third: #ebebeb;
+  --spacing-72: 18rem;
+  --font-display: "Poppins", sans-serif;
+  --brand-animationX: slideX 3s ease-in-out infinite;
+
+  @keyframes slideX {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(150px);
+    }
+  }
+}
+button {
+  @apply cursor-pointer hover:underline underline-offset-4 shadow-md;
+}
+.sec {
+  @apply px-8 sm:px-20;
+}
+.link {
+  @apply tracking-wider hover:underline transition duration-300 underline-offset-4 decoration-primary;
+}
+option {
+  @apply bg-gray-600 text-white font-medium tracking-wider;
+}
